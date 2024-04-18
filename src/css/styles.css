@@ -1,4 +1,4 @@
-/* Reset styles */
+* Reset styles */
 * {
   box-sizing: border-box;
 }
@@ -91,11 +91,9 @@ form {
   outline: none;
 }
 
-.submitBtn {
-  display: flex;
+.submitBtn,
+.loadMore {
   padding: 8px 16px;
-  justify-content: center;
-  align-items: center;
   border-radius: 8px;
   background: #4e75ff;
   color: #fff;
@@ -109,7 +107,10 @@ form {
 
 .submitBtn:hover,
 .submitBtn:focus,
-.submitBtn:active {
+.submitBtn:active,
+.loadMore:hover,
+.loadMore:focus,
+.loadMore:active {
   background: #6c8cff;
 }
 
@@ -170,7 +171,8 @@ form {
   overflow: hidden;
   object-fit: cover;
 }
-.loader {
+.loader,
+.loader2 {
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -181,7 +183,8 @@ form {
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
 }
-.loader::after {
+.loader::after,
+.loader2::after {
   content: '';
   box-sizing: border-box;
   position: absolute;
@@ -213,4 +216,9 @@ form {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.loadMore {
+  display: block;
+  margin: 36px auto;
 }
